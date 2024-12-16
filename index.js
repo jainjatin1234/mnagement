@@ -26,12 +26,12 @@ const app = express();
 app.use(cors()); // Enable CORS for all routes
 
 // OR for specific origins
-app.use(
-  cors({
-    origin: 'http://localhost:5173', // Allow only this origin
-    methods: ['GET', 'POST'], // Allowed HTTP methods
-  })
-);
+// app.use(
+//   cors({
+//     origin: 'http://localhost:5173', // Allow only this origin
+//     methods: ['GET', 'POST'], // Allowed HTTP methods
+//   })
+// );
 
 
 
