@@ -11,11 +11,11 @@ import {
 
 const router = express.Router()
 
-router.post("/add",  addNote)
+router.post("/add",verifyToken,  addNote)
 router.post("/edit/:noteId", verifyToken, editNote)
-router.get("/all",  getAllNotes)
-router.delete("/delete/:noteId", deleteNote)
-router.put("/update-note-pinned/:noteId", updateNotePinned)
-router.get("/search", searchNote)
+router.get("/all",verifyToken,  getAllNotes)
+router.delete("/delete/:noteId", verifyToken, deleteNote)
+router.put("/update-note-pinned/:noteId", verifyToken, updateNotePinned)
+router.get("/search", verifyToken, searchNote)
 
 export default router
