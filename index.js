@@ -22,9 +22,7 @@ mongoose
 const app = express();
 
 // Allow requests from localhost:5173
-app.use(cors({
-  origin: 'http://localhost:5173'
-}));
+
 
 // Alternatively, allow all origins (not recommended for production)
 app.use(cors());
